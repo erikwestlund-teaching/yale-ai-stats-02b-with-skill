@@ -12,12 +12,12 @@ Run this once in the R console, from the project folder:
 source("setup.R")
 ```
 
-It installs any of this project's packages that are missing: tidyverse, rmarkdown, here.
+It installs any of this project's packages that are missing: readr, dplyr, ggplot2, here, rmarkdown.
 
 ## Open the project
 
 - **RStudio:** open `yale-ai-stats-02b-with-skill.Rproj`.
-- **Positron or VS Code:** open this folder (or `yale-ai-stats-02b-with-skill.code-workspace`).
+- **Positron or VS Code:** open this folder.
 - **Claude Code or Codex:** start the tool from a terminal in this folder.
 
 You need R and Quarto (bundled with RStudio and Positron). `setup.R` installs the packages.
@@ -37,4 +37,4 @@ A skill makes certain behavior more likely. It doesn't guarantee it.
 
 ## About the folders
 
-This project was created from a [Framework](https://framework.pub) blueprint, so it has the folder layout of a real analysis project: raw data in `inputs/raw/`, notebooks in `notebooks/`, results in `outputs/`. You don't need the framework R package; the notebooks use plain R. Files like `settings.yml` and `scaffold.R` belong to Framework and can be ignored.
+This project was created from a [Framework](https://framework.pub) blueprint, so it has the folder layout of a real analysis project: raw data in `inputs/raw/`, notebooks in `notebooks/`, results in `outputs/`. You don't need the framework R package; the notebooks use plain R.

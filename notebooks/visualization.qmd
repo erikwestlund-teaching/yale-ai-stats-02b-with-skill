@@ -7,7 +7,9 @@ title: "Blood Pressure and Age"
 Using `inputs/raw/neighborhood_health_survey.csv` (see `inputs/raw/codebook.md`), make a figure showing how mean systolic blood pressure (`systolic_mean`) relates to age (`age_years`), by `gender`. Then write a short interpretation.
 
 ```{r}
-library(tidyverse)
+library(readr)
+library(dplyr)
+library(ggplot2)
 
 survey <- read_csv(here::here("inputs/raw/neighborhood_health_survey.csv"), show_col_types = FALSE)
 ```
