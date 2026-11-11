@@ -1,6 +1,6 @@
 # Exercise 2b: With a Skill
 
-Part of the workshop **AI Tools for Statistical Programming and Analysis**.
+Part of the workshop **AI-Powered Coding and Data Analysis**.
 
 Exercise 2 is the same project twice, with the same data, notebook, and prompt. This copy **has** a skill, `ggplot-style`: a set of house rules for ggplot2 figures. It's in `.agents/skills/` (read by Posit Assistant and Codex) and `.claude/skills/` (read by Claude Code). Folders starting with `.` are hidden. In RStudio's Files pane, use **More → Show Hidden Files**. The other copy is [`yale-ai-stats-02a-without-skill`](https://github.com/erikwestlund-teaching/yale-ai-stats-02a-without-skill).
 
