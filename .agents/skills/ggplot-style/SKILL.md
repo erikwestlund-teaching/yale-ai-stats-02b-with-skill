@@ -11,27 +11,27 @@ Follow these rules for every ggplot2 figure in this project.
 
 - Start from `theme_minimal(base_size = 14)`.
 - Put the legend at the bottom: `theme(legend.position = "bottom")`.
-- Color gender with fixed colors: Female = `#7B3294`, Male = `#008837`. The data code gender as `female` and `male`, so use `scale_color_manual(values = c(female = "#7B3294", male = "#008837"), labels = c(female = "Female", male = "Male"))`. Use the same colors for fills.
+- Color gender or sex with fixed colors: Female = `#7B3294`, Male = `#008837`. Name the values by the codes in the data and add readable labels, for example `scale_color_manual(values = c(female = "#7B3294", male = "#008837"), labels = c(female = "Female", male = "Male"))`. Use the same colors for fills.
 - For other discrete colors, use `scale_color_brewer(palette = "Dark2")` (or `scale_fill_brewer`).
 - When points overlap, use `alpha = 0.15` and `size = 1`, and add a smoothed trend with `geom_smooth(method = "loess", se = TRUE)`.
 
 ## Labels
 
-- The title states the finding in plain words. Good: "Systolic blood pressure rises with age". Bad: "systolic_mean vs age_years".
-- Axis labels include units, e.g. "Age (years)", "Systolic blood pressure (mm Hg)".
-- Add a subtitle that names the data and the sample size, e.g. "Neighborhood Health Survey, adults 18+ (n = 3,412)". Compute n from the plotted data. Don't type it in.
-- Use this caption, word for word: "Source: Neighborhood Health Survey (simulated), 2021–2023. Unweighted."
+- The title states the finding in plain words. Good: "Income rises with years of schooling". Bad: "income vs educ_years".
+- Axis labels include units, e.g. "Age (years)", "Household income (US$)".
+- Add a subtitle that names the data, the population, and the sample size, e.g. "County Health Survey, adults 18+ (n = 2,105)". Compute n from the plotted data. Don't type it in.
+- Add a caption in this form: "Source: <data name>, <years>. Unweighted." Add "(simulated)" after the data name when the data are simulated. Write "Weighted" when the estimates use survey weights.
 
 ## Data
 
 - Drop rows missing any plotted variable **before** plotting, and say in the text how many rows were dropped.
-- Unless asked otherwise, plot adults only (`age_years >= 18`) and say so in the subtitle.
-- `age_years` is top-coded at 80: a value of 80 means 80 or older. Describe the oldest ages as "80 or older."
+- For data on people, plot adults only (age 18 or older) unless asked otherwise, and say so in the subtitle.
+- Check the codebook for top-coded variables. Describe a top-coded value as that value "or older" (or "or more"). For example, an age top-coded at 80 means "80 or older."
 
 ## Interpretation
 
 - Write 2–3 sentences that describe the pattern. Don't use causal language ("causes", "leads to", "effect of").
-- Mention at least one limitation. Always note that the estimates are unweighted.
+- Mention at least one limitation. Always say whether the estimates are weighted or unweighted.
 
 ## Final check
 
